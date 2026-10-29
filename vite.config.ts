@@ -3,6 +3,9 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
+  // Fixa o preset: evita que a Netlify troque automaticamente para o preset "netlify",
+  // que quebra a pré-renderização. A saída estática fica em dist/client.
+  nitro: { preset: "cloudflare-module" },
   tanstackStart: {
     server: { entry: "server" },
     // Página única pré-renderizada como HTML estático para hospedagem na Netlify.

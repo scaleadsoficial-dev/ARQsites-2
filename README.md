@@ -49,5 +49,6 @@ Nenhuma variável de ambiente é necessária.
 - Links para WhatsApp (wa.me) e Instagram
 
 ## Limitações conhecidas
+- O build fixa o preset `cloudflare-module` (em `vite.config.ts` e `netlify.toml`). Não use o preset `netlify` nem `node-server`: eles quebram a geração da página inicial.
 - Sem formulário: o contato é feito pelo WhatsApp.
 - Sem depoimentos (nenhum foi fornecido).
