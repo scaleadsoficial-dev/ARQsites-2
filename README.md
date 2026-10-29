@@ -18,7 +18,7 @@ npm run dev        # http://localhost:8080
 ```bash
 npm run build
 ```
-Saída estática: **`dist/client`** (contém `index.html`, imagens e scripts).
+Saída estática: **`dist/client`** (contém `index.html`, imagens e scripts). Os caminhos de saída são definidos explicitamente em `vite.config.ts`, inclusive fora do Lovable.
 
 ## Publicar no GitHub
 ```bash
@@ -49,6 +49,6 @@ Nenhuma variável de ambiente é necessária.
 - Links para WhatsApp (wa.me) e Instagram
 
 ## Limitações conhecidas
-- O build fixa o preset `cloudflare-module` (em `vite.config.ts` e `netlify.toml`). Não use o preset `netlify` nem `node-server`: eles quebram a geração da página inicial.
+- O build fixa o preset `cloudflare-module` e os caminhos `dist/server` e `dist/client`. Não altere o preset nem publique a pasta do servidor; a Netlify serve apenas `dist/client`.
 - Sem formulário: o contato é feito pelo WhatsApp.
 - Sem depoimentos (nenhum foi fornecido).

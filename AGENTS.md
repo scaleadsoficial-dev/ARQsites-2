@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep Nitro's output directories explicit and aligned with Netlify's publish directory; external builds do not inherit Lovable's sandbox output overrides.
